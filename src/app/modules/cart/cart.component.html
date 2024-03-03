@@ -1,0 +1,15 @@
+<div class="cart">
+    <ul class="cart-list" nz-list [nzDataSource]="cart.items">
+        <nz-list-item class="table-header">
+            <span nz-typography>PLU</span>
+            <span nz-typography>Name</span>
+            <span nz-typography>Amt.</span>
+            <span nz-typography>Price</span>
+            <span nz-typography>Item Total</span>
+        </nz-list-item>
+        <div *ngFor="let item of cart.items; let i = index" [ngClass]="{ 'row table-radius': i % 2 !== 0 }">
+            <app-cart-item [item]="item"></app-cart-item>
+        </div>
+        <nz-list-footer class="table-footer">{{ cart.cartTotalPrice }} {{cart.items.at(0)?.currency}}</nz-list-footer>
+    </ul>
+</div>

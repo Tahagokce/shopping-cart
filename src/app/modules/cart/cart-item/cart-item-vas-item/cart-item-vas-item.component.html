@@ -1,0 +1,12 @@
+<nz-list nzBordered="false" nzSize="small">
+    <nz-list-item class="vas-item" *ngFor="let vasItem of vasItems">
+        <nz-list-item-meta>
+            <div nz-typography>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        </nz-list-item-meta>
+        <nz-list-item-meta><span nz-typography>{{ vasItem.content }}</span></nz-list-item-meta>
+        <nz-list-item-meta><span nz-typography>{{ vasItem.quantity }}</span></nz-list-item-meta>
+        <nz-list-item-meta><span nz-typography>{{ vasItem.price }} {{ vasItem.currency }}</span></nz-list-item-meta>
+        <nz-list-item-meta><span nz-typography>{{ calculateTotal(vasItem) }} {{ vasItem.currency }}</span>
+        </nz-list-item-meta>
+    </nz-list-item>
+</nz-list>

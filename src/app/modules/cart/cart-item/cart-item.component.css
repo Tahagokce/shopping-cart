@@ -1,0 +1,9 @@
+.cart-item{
+    padding: 15px;
+    border-bottom: none !important;
+}
+
+span{
+    max-width: 100px;
+    text-align: center;
+}

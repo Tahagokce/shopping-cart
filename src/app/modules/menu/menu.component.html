@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="header">
+        Product Category
+    </div>
+</div>
+
+
+<div *ngFor="let menuItem of menuItems">
+    <app-menu-item [menuItem]="menuItem"></app-menu-item>
+</div>
+
+<div class="bottom-buttons">
+    <button class="home-icon" nz-button nzType="primary"><span nz-icon nzType="home" nzTheme="outline"></span></button>
+    <button class="menu-icon" nz-button nzType="primary"><span nz-icon nzType="menu" nzTheme="outline"></span>Menu
+    </button>
+</div>

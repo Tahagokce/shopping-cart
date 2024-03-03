@@ -1,0 +1,8 @@
+<nz-list-item class="cart-item">
+    <span nz-typography>{{ item.plu }}</span>
+    <span nz-typography>{{ item.content }}</span>
+    <span nz-typography>{{ item.quantity }}</span>
+    <span nz-typography>{{ item.price }} {{ item.currency }}</span>
+    <span nz-typography>{{ calculateTotal(item) }} {{ item.currency }}</span>
+</nz-list-item>
+<app-cart-item-vas-item [vasItems]="item.vasItems"></app-cart-item-vas-item>

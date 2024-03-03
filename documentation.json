@@ -1,0 +1,2820 @@
+{
+    "pipes": [],
+    "interfaces": [],
+    "injectables": [],
+    "guards": [],
+    "interceptors": [],
+    "classes": [
+        {
+            "name": "CartItem",
+            "id": "class-CartItem-5d532f9f013dfd0393c600c6ef4402a9954e9da6d81129be1e308c6301e0895822c91496ff6f0bb219bcdde8baf31ea19b45cef240c56f10ffadaf77395881e3",
+            "file": "src/app/modules/cart/models/CartItem.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "import {ItemContent} from \"../../item/model/ItemContent\";\n\nexport class CartItem extends ItemContent{\n    quantity: number = 0;\n    vasItems: CartItem[] = [];\n    plu: number = 0;\n    private totalPrice: number = 0;\n}\n",
+            "properties": [
+                {
+                    "name": "plu",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "quantity",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "totalPrice",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 7,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "vasItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CartItem[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "content",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                },
+                {
+                    "name": "currency",
+                    "defaultValue": "\"€\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                },
+                {
+                    "name": "img",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                },
+                {
+                    "name": "menuId",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                },
+                {
+                    "name": "price",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4,
+                    "inheritance": {
+                        "file": "ItemContent"
+                    }
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [
+                "ItemContent"
+            ],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "ItemContent",
+            "id": "class-ItemContent-55155ee522da7ec4c9c297aa26c79792480a0c9c63a581f0e67c18dc017e414a62a3fa6a75f531d70b06fcad7557b7d3b4220bf173cdd450f679c7dfc892c019",
+            "file": "src/app/modules/item/model/ItemContent.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class ItemContent {\n    id: number = 0;\n    menuId: number = 0;\n    price: number = 0;\n    currency: string = \"€\"\n    content: string = \"\"\n    img: string = \"\";\n}\n",
+            "properties": [
+                {
+                    "name": "content",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "currency",
+                    "defaultValue": "\"€\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "id",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "img",
+                    "defaultValue": "\"\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "menuId",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                },
+                {
+                    "name": "price",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        },
+        {
+            "name": "MenuItem",
+            "id": "class-MenuItem-12629e96a1cca7facea6aa7acff379fb1e06c2f74e831b2313fb63663a9b44a279c48d842f9b73feb70549a5042ec4121195efcb4f3b6d61b0e3643b58bde2ef",
+            "file": "src/app/modules/menu/model/MenuItem.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "class",
+            "sourceCode": "export class MenuItem {\n  id: number = 0;\n  name: string = '';\n}\n",
+            "properties": [
+                {
+                    "name": "id",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "methods": [],
+            "indexSignatures": [],
+            "extends": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "hostBindings": [],
+            "hostListeners": []
+        }
+    ],
+    "directives": [],
+    "components": [
+        {
+            "name": "AppComponent",
+            "id": "component-AppComponent-ab4329eb11e41536bf52f6c60aaa6eadeb01fc78b5e14ba7bd68a31c32f245857d0556501cfbb8889d6459945a18a80c59a1305414942b3aeeab44854bf5ae02",
+            "file": "src/app/app.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [
+                "./app.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./app.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-root',\n  templateUrl: './app.component.html',\n  styleUrls: ['./app.component.css'],\n})\nexport class AppComponent {\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./app.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<app-layout></app-layout>\n"
+        },
+        {
+            "name": "CartComponent",
+            "id": "component-CartComponent-c9d3db4538da03f30e901a93b0b6d6e9c00a949767d44805f065c56538ffdebcd748f395b78febb08be7752df761a4621d7a5e724064d46946fdd2d4de4a5004",
+            "file": "src/app/modules/cart/cart.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-cart",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./cart.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "cart",
+                    "defaultValue": "{cartTotalPrice: 0, items: []}",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "CartState",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "prepareCarts",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {select, Store} from \"@ngrx/store\";\nimport {getCarts} from \"./store/cart.selector\";\nimport {CartState} from \"./store/cart.reducer\";\n\n@Component({\n    selector: 'app-cart',\n    templateUrl: './cart.component.html',\n    styleUrl: './cart.component.css'\n})\nexport class CartComponent {\n    @Input() cart: CartState = {cartTotalPrice: 0, items: []};\n\n    constructor(private store: Store<{ cart: { menuId: number } }>) {\n        this.prepareCarts();\n    }\n\n    prepareCarts() {\n        this.store.pipe(\n            select(getCarts)\n        ).subscribe(carts => {\n            this.cart = carts;\n        });\n    }\n}\n",
+            "styleUrl": "./cart.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "Store<literal type>",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "Store<literal type>",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"cart\">\n    <ul class=\"cart-list\" nz-list [nzDataSource]=\"cart.items\">\n        <nz-list-item class=\"table-header\">\n            <span nz-typography>PLU</span>\n            <span nz-typography>Name</span>\n            <span nz-typography>Amt.</span>\n            <span nz-typography>Price</span>\n            <span nz-typography>Item Total</span>\n        </nz-list-item>\n        <div *ngFor=\"let item of cart.items; let i = index\" [ngClass]=\"{ 'row table-radius': i % 2 !== 0 }\">\n            <app-cart-item [item]=\"item\"></app-cart-item>\n        </div>\n        <nz-list-footer class=\"table-footer\">{{ cart.cartTotalPrice }} {{cart.items.at(0)?.currency}}</nz-list-footer>\n    </ul>\n</div>\n"
+        },
+        {
+            "name": "CartItemComponent",
+            "id": "component-CartItemComponent-2ac33ca04a1d11ba96f68a65cf7ca530f4a496b629673fa8f9ff909922637c1cbb9d6d27108bb282f34c6ad6e85b824059774fdda2318e405a499da41d785f3c",
+            "file": "src/app/modules/cart/cart-item/cart-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-cart-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./cart-item.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "item",
+                    "defaultValue": "new CartItem()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "CartItem",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "calculateTotal",
+                    "args": [
+                        {
+                            "name": "cartItem",
+                            "type": "CartItem",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "cartItem",
+                            "type": "CartItem",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {CartItem} from \"../models/CartItem\";\nimport {calculatePrice} from \"../store/cart.reducer\";\n\n@Component({\n  selector: 'app-cart-item',\n  templateUrl: './cart-item.component.html',\n  styleUrl: './cart-item.component.css'\n})\nexport class CartItemComponent {\n  @Input() item: CartItem = new CartItem();\n\n  calculateTotal(cartItem: CartItem): number {\n    return calculatePrice(cartItem)\n  }\n}\n",
+            "styleUrl": "./cart-item.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<nz-list-item class=\"cart-item\">\n    <span nz-typography>{{ item.plu }}</span>\n    <span nz-typography>{{ item.content }}</span>\n    <span nz-typography>{{ item.quantity }}</span>\n    <span nz-typography>{{ item.price }} {{ item.currency }}</span>\n    <span nz-typography>{{ calculateTotal(item) }} {{ item.currency }}</span>\n</nz-list-item>\n<app-cart-item-vas-item [vasItems]=\"item.vasItems\"></app-cart-item-vas-item>\n"
+        },
+        {
+            "name": "CartItemVasItemComponent",
+            "id": "component-CartItemVasItemComponent-45c5c960253035a323be6132ecba989a61a27ae409d36066bd9c9888b08d3e86249b206af9bb3da7e4081a2380d792febca8d6d6d02cbd496ed273cb0ddc958d",
+            "file": "src/app/modules/cart/cart-item/cart-item-vas-item/cart-item-vas-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-cart-item-vas-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./cart-item-vas-item.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "vasItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "CartItem[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "calculateTotal",
+                    "args": [
+                        {
+                            "name": "cartItem",
+                            "type": "CartItem",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "number",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "cartItem",
+                            "type": "CartItem",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {CartItem} from \"../../models/CartItem\";\nimport {calculatePrice} from \"../../store/cart.reducer\";\n\n@Component({\n  selector: 'app-cart-item-vas-item',\n  templateUrl: './cart-item-vas-item.component.html',\n  styleUrl: './cart-item-vas-item.component.css'\n})\nexport class CartItemVasItemComponent {\n  @Input() vasItems: CartItem[] = [];\n\n  calculateTotal(cartItem: CartItem): number {\n    return calculatePrice(cartItem)\n  }\n}\n",
+            "styleUrl": "./cart-item-vas-item.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<nz-list nzBordered=\"false\" nzSize=\"small\">\n    <nz-list-item class=\"vas-item\" *ngFor=\"let vasItem of vasItems\">\n        <nz-list-item-meta>\n            <div nz-typography>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>\n        </nz-list-item-meta>\n        <nz-list-item-meta><span nz-typography>{{ vasItem.content }}</span></nz-list-item-meta>\n        <nz-list-item-meta><span nz-typography>{{ vasItem.quantity }}</span></nz-list-item-meta>\n        <nz-list-item-meta><span nz-typography>{{ vasItem.price }} {{ vasItem.currency }}</span></nz-list-item-meta>\n        <nz-list-item-meta><span nz-typography>{{ calculateTotal(vasItem) }} {{ vasItem.currency }}</span>\n        </nz-list-item-meta>\n    </nz-list-item>\n</nz-list>\n"
+        },
+        {
+            "name": "ContentComponent",
+            "id": "component-ContentComponent-388f35c61f63db01d95a10110001cd761ddb334561be231ae445de42ab4b9f1a9a4170e4b5fc95c5f5c6150f64b4350ec44a3ea16998eb969aaf8b6f9d32cbec",
+            "file": "src/component/layout/content/content.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-content",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./content.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-content',\n  templateUrl: './content.component.html',\n  styleUrl: './content.component.css'\n})\nexport class ContentComponent {\n\n}\n",
+            "styleUrl": "./content.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<app-item></app-item>\n"
+        },
+        {
+            "name": "FooterComponent",
+            "id": "component-FooterComponent-496e78ec9bda5a6369f228465a54b28be5594bf6756c44a2bf1fce91530baf5b416ab8d6b38ffb8d7a60b52cbc33c51cd56ca507e7c4eb218a7d011e9c1e9f56",
+            "file": "src/component/layout/footer/footer.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-footer",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./footer.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-footer',\n  templateUrl: './footer.component.html',\n  styleUrl: './footer.component.css'\n})\nexport class FooterComponent {\n\n}\n",
+            "styleUrl": "./footer.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": ""
+        },
+        {
+            "name": "ItemComponent",
+            "id": "component-ItemComponent-d95462c8f72fa4be3e3bb6a2f2722433b3297e7eefb8a6bdf1ef47fb38ad307c67def6824d00971ed0fd1d13b31e29bae3b924f360079ccb9ed4d7eb377f8c50",
+            "file": "src/app/modules/item/item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-item",
+            "styleUrls": [
+                "./item.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./item.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "items",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ItemContent[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "getItems",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {ItemContent} from './model/ItemContent';\nimport MockData from '../../../util/MockData';\nimport {select, Store} from '@ngrx/store';\nimport {selectMenuId} from './store/item.selector';\nimport {map} from 'rxjs/operators';\n\n@Component({\n    selector: 'app-item',\n    templateUrl: './item.component.html',\n    styleUrls: ['./item.component.css']\n})\nexport class ItemComponent implements OnInit {\n    items: ItemContent[] = [];\n\n    constructor(private store: Store<{ menu: { menuId: number } }>) {\n    }\n\n    ngOnInit(): void {\n        this.getItems();\n    }\n\n    getItems() {\n        this.store.pipe(\n            select(selectMenuId),\n            map(menuId => MockData.cartItems.filter(item => item.menuId === menuId)),\n        ).subscribe(filteredItems => {\n            this.items = filteredItems;\n        });\n    }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./item.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "Store<literal type>",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "Store<literal type>",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div nz-row [nzGutter]=\"8\">\n    <div *ngFor=\"let item of items\">\n        <app-item-content [cartItem]=\"item\"></app-item-content>\n    </div>\n</div>\n"
+        },
+        {
+            "name": "ItemContentComponent",
+            "id": "component-ItemContentComponent-db880cc52c3bd5e98eee6c5bf1bf6e683a042bca1d06d3de37a228a9d1923d70457ab3480eb53cdbeee703fb740cd1e52eca5075f050da591926bc6886d155f4",
+            "file": "src/app/modules/item/item-content/item-content.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-item-content",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./item-content.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "cartItem",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "ItemContent",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "addItemToCart",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "removeItemToCart",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {ItemContent} from \"../model/ItemContent\";\nimport {Store} from \"@ngrx/store\";\nimport {addItem, removeItem} from \"../../cart/store/cart.actions\";\n\n@Component({\n    selector: 'app-item-content',\n    templateUrl: './item-content.component.html',\n    styleUrl: './item-content.component.css'\n})\nexport class ItemContentComponent {\n    @Input() cartItem!: ItemContent;\n\n    constructor(private store: Store) {\n    }\n\n    addItemToCart() {\n        this.store.dispatch(addItem({item: this.cartItem}));\n\n    }\n\n    removeItemToCart() {\n        this.store.dispatch(removeItem({itemId: this.cartItem.id}));\n    }\n}\n",
+            "styleUrl": "./item-content.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "Store",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 12,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "Store",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"card-item\" nz-col [nzSpan]=\"8\" >\n    <nz-card nzHoverable\n             class=\"card-content\"\n             nzTitle=\"{{cartItem.price + ' ' + cartItem.currency}}\">\n        <p>{{ cartItem?.content }}</p>\n\n        <div class=\"bottom-buttons\">\n            <button class=\"minus-icon minus-color\" (click)=\"removeItemToCart()\" nz-button nzType=\"primary\"><span nz-icon nzType=\"minus\" nzTheme=\"outline\"></span></button>\n            <button class=\"plus-icon plus-color\" (click)=\"addItemToCart()\" nz-button nzType=\"primary\"><span nz-icon nzType=\"plus\" nzTheme=\"outline\"></span></button>\n        </div>\n    </nz-card>\n</div>\n"
+        },
+        {
+            "name": "LayoutComponent",
+            "id": "component-LayoutComponent-9337794f4d0dd2c85ea05bff20383b8470cdb3b8c5bdaad29a34fe7128fd1a29266bd15fb41ee89e2f9367a3e874190e5b0ad43392ba1b00697add4018efc450",
+            "file": "src/component/layout/layout.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-layout",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./layout.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-layout',\n  templateUrl: './layout.component.html',\n  styleUrl: './layout.component.css'\n})\nexport class LayoutComponent {\n\n}\n",
+            "styleUrl": "./layout.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<nz-layout>\n\n    <nz-layout>\n        <nz-content class=\"cart-content\">\n            <app-cart></app-cart>\n        </nz-content>\n    </nz-layout>\n\n    <nz-layout class=\"item-content\">\n\n        <nz-content>\n            <app-content></app-content>\n        </nz-content>\n\n        <nz-footer>\n            <app-footer></app-footer>\n        </nz-footer>\n\n    </nz-layout>\n\n    <nz-sider>\n        <app-sider></app-sider>\n    </nz-sider>\n</nz-layout>\n"
+        },
+        {
+            "name": "MenuComponent",
+            "id": "component-MenuComponent-f24980a4bd9d77f21a9cde81b456cf3d655e514ce33daf5dbc648f745bd6b90c3ba31dc7ab2c273c43e1b85fa4ee39015dcb16cdda94ceb44a69d9b8d838d1c7",
+            "file": "src/app/modules/menu/menu.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-menu",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./menu.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "menuItems",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MenuItem[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "fetchMenus",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "Promise<MenuItem[]>",
+                    "typeParameters": [],
+                    "line": 27,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "modifierKind": [
+                        134
+                    ]
+                },
+                {
+                    "name": "getMenus",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 13,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, OnInit} from '@angular/core';\nimport {MenuItem} from \"./model/MenuItem\";\nimport MockData from \"../../../util/MockData\";\n\n@Component({\n  selector: 'app-menu',\n  templateUrl: './menu.component.html',\n  styleUrl: './menu.component.css'\n})\nexport class MenuComponent implements OnInit {\n  menuItems: MenuItem[] = [];\n\n  ngOnInit(): void {\n    this.getMenus();\n  }\n\n  getMenus() {\n    this.fetchMenus()\n      .then(response => {\n        this.menuItems = response;\n      })\n      .catch(error => {\n        console.log(error);\n      });\n  }\n\n  async fetchMenus(): Promise<MenuItem[]> {\n    return new Promise((resolve) => {\n      setTimeout(() => {\n        const menuItems = MockData.menuItems;\n        resolve(menuItems);\n      }, 500);\n    });\n  }\n}\n",
+            "styleUrl": "./menu.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"container\">\n    <div class=\"header\">\n        Product Category\n    </div>\n</div>\n\n\n<div *ngFor=\"let menuItem of menuItems\">\n    <app-menu-item [menuItem]=\"menuItem\"></app-menu-item>\n</div>\n\n<div class=\"bottom-buttons\">\n    <button class=\"home-icon\" nz-button nzType=\"primary\"><span nz-icon nzType=\"home\" nzTheme=\"outline\"></span></button>\n    <button class=\"menu-icon\" nz-button nzType=\"primary\"><span nz-icon nzType=\"menu\" nzTheme=\"outline\"></span>Menu\n    </button>\n</div>\n"
+        },
+        {
+            "name": "MenuItemComponent",
+            "id": "component-MenuItemComponent-d5e35988a0e69b2fe293c39b01668c23312cc5d8927916752767249e247e244a326e098a4630335b5df7b090c26d54b929b9dd34212236f27d3cd624a47d71cf",
+            "file": "src/app/modules/menu/menu-item/menu-item.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-menu-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./menu-item.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "menuItem",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "MenuItem",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "selectedMenuId",
+                    "defaultValue": "0",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "setMenuId",
+                    "args": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "id",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "setSelectedMenuId",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component, Input} from '@angular/core';\nimport {MenuItem} from \"../model/MenuItem\";\nimport {setMenuId} from \"../../item/store/item.actions\";\nimport {select, Store} from \"@ngrx/store\";\nimport {selectMenuId} from \"../../item/store/item.selector\";\n\n@Component({\n    selector: 'app-menu-item',\n    templateUrl: './menu-item.component.html',\n    styleUrl: './menu-item.component.css'\n})\nexport class MenuItemComponent {\n    @Input() menuItem!: MenuItem;\n    selectedMenuId: number = 0;\n\n    constructor(private store: Store) {\n        this.setSelectedMenuId()\n    }\n\n    setMenuId(id: number) {\n        this.store.dispatch(setMenuId({menuId: id}));\n    }\n\n\n    setSelectedMenuId() {\n        this.store.pipe(\n            select(selectMenuId),\n        ).subscribe(menuId => {\n            this.selectedMenuId = menuId;\n        });\n    }\n}\n",
+            "styleUrl": "./menu-item.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "store",
+                        "type": "Store",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 14,
+                "jsdoctags": [
+                    {
+                        "name": "store",
+                        "type": "Store",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "templateData": "<div class=\"container\">\n    <div class=\"card\" [class]=\"menuItem.id === selectedMenuId ? 'active-card' : ''\" (click)=\"setMenuId(menuItem.id)\">\n        {{ menuItem?.name }}\n    </div>\n</div>\n"
+        },
+        {
+            "name": "SiderComponent",
+            "id": "component-SiderComponent-0e6d801dbb4a39b38b12485407f75bd01ffcb20f59acc629215097f4e14a94bb256699e8623e08e3a2855049c9377c569d5b7f78470b062bcd9a89db1426eba9",
+            "file": "src/component/layout/sider/sider.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-sider",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./sider.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {Component} from '@angular/core';\n\n@Component({\n  selector: 'app-sider',\n  templateUrl: './sider.component.html',\n  styleUrl: './sider.component.css'\n})\nexport class SiderComponent {\n\n}\n",
+            "styleUrl": "./sider.component.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<app-menu></app-menu>\n"
+        }
+    ],
+    "modules": [
+        {
+            "name": "AppModule",
+            "id": "module-AppModule-a5e034c23c069c35aa9ed48bf9898f4b9aeb5ae67a27cd0e7e4049adb98fb654b1d00ba2f38550de22a6591b3e2e9c5557dc05634d93fb0ef1cf3ed507b58c49",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/app.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {BrowserModule} from '@angular/platform-browser';\n\n\nimport {AppComponent} from './app.component';\nimport {NzLayoutModule} from 'ng-zorro-antd/layout';\nimport {LayoutComponent} from \"../component/layout/layout.component\";\nimport {ContentComponent} from \"../component/layout/content/content.component\";\nimport {FooterComponent} from \"../component/layout/footer/footer.component\";\nimport {SiderComponent} from \"../component/layout/sider/sider.component\";\nimport {MenuModule} from \"./modules/menu/menu.module\";\nimport {CartModule} from \"./modules/cart/cart.module\";\nimport {ItemModule} from \"./modules/item/item.module\";\nimport {StoreModule} from '@ngrx/store';\nimport {HttpClientModule} from \"@angular/common/http\";\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    LayoutComponent,\n    ContentComponent,\n    FooterComponent,\n    SiderComponent,\n  ],\n    imports: [\n        BrowserModule,\n        NzLayoutModule,\n        MenuModule,\n        CartModule,\n        ItemModule,\n        HttpClientModule,\n        StoreModule.forRoot({}, {}),\n    ],\n  providers: [ItemModule, MenuModule],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        },
+                        {
+                            "name": "ContentComponent"
+                        },
+                        {
+                            "name": "FooterComponent"
+                        },
+                        {
+                            "name": "LayoutComponent"
+                        },
+                        {
+                            "name": "SiderComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "CartModule"
+                        },
+                        {
+                            "name": "ItemModule"
+                        },
+                        {
+                            "name": "MenuModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": [
+                        {
+                            "name": "AppComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "CartModule",
+            "id": "module-CartModule-98de0ab1f28226cb5103033e7623ab5867a4218ec086d9a580dadf4a8d625fb50e8f6c88470c597472539740e73ee0b26771ddad7aeedef6a5fcb6a76c870ba5",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/modules/cart/cart.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {CommonModule} from '@angular/common';\nimport {NzCardComponent} from \"ng-zorro-antd/card\";\nimport {CartItemComponent} from \"./cart-item/cart-item.component\";\nimport {CartComponent} from \"./cart.component\";\nimport {NzColDirective, NzRowDirective} from \"ng-zorro-antd/grid\";\nimport {NzListComponent, NzListFooterComponent, NzListHeaderComponent, NzListItemComponent} from \"ng-zorro-antd/list\";\nimport {CartItemVasItemComponent} from \"./cart-item/cart-item-vas-item/cart-item-vas-item.component\";\nimport {NzTypographyComponent} from \"ng-zorro-antd/typography\";\n\n\n@NgModule({\n  declarations: [\n      CartComponent,\n      CartItemComponent,\n      CartItemVasItemComponent\n  ],\n  imports: [\n    CommonModule,\n    NzCardComponent,\n    NzRowDirective,\n    NzColDirective,\n    NzListComponent,\n    NzListItemComponent,\n    NzListFooterComponent,\n    NzListHeaderComponent,\n    NzTypographyComponent\n  ],\n  exports: [\n    CartComponent\n  ]\n})\nexport class CartModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "CartComponent"
+                        },
+                        {
+                            "name": "CartItemComponent"
+                        },
+                        {
+                            "name": "CartItemVasItemComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "CartComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "ItemModule",
+            "id": "module-ItemModule-e39102b135f6f8f565dd91697386b1e80a6b0fae47e598b352b55a14ea864c2cee69a1f66e17a05f61794453b257e7e603e9b1bcf9862c6a88fbbaf53a0584de",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/modules/item/item.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {CommonModule} from '@angular/common';\nimport {ItemComponent} from \"./item.component\";\nimport {NzCardModule} from 'ng-zorro-antd/card'\nimport {ItemContentComponent} from \"./item-content/item-content.component\";\nimport {NzColDirective, NzRowDirective} from \"ng-zorro-antd/grid\";\nimport {NzButtonComponent} from \"ng-zorro-antd/button\";\nimport {StoreModule} from \"@ngrx/store\";\nimport {menuReducer} from \"./store/item.reducer\";\nimport {cartReducer} from \"../cart/store/cart.reducer\";\nimport {NzIconDirective, NzIconModule} from \"ng-zorro-antd/icon\";\nimport {HomeOutline, MenuOutline, MinusOutline, PlusOutline} from \"@ant-design/icons-angular/icons\";\n\n\n@NgModule({\n    declarations: [\n        ItemComponent,\n        ItemContentComponent,\n    ],\n    exports: [\n        ItemComponent\n    ],\n    imports: [\n        CommonModule,\n        NzCardModule,\n        NzColDirective,\n        NzRowDirective,\n        NzButtonComponent,\n        StoreModule.forFeature('menu', menuReducer),\n        StoreModule.forFeature('cart', cartReducer),\n        NzIconDirective,\n        NzIconModule.forChild([HomeOutline, MenuOutline, PlusOutline, MinusOutline]),\n\n    ]\n})\nexport class ItemModule {\n}\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ItemComponent"
+                        },
+                        {
+                            "name": "ItemContentComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ItemComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "MenuModule",
+            "id": "module-MenuModule-f3d96295b611709ef0c2a943d0ae7a68f1b1ff1e50ec4f7b7e184fe33e2fbaff2828f6c95a0a8213ee81091610edabf56e5db494462e5889c673846f70271239",
+            "description": "",
+            "deprecationMessage": "",
+            "deprecated": false,
+            "file": "src/app/modules/menu/menu.module.ts",
+            "methods": [],
+            "sourceCode": "import {NgModule} from '@angular/core';\nimport {CommonModule} from '@angular/common';\nimport {NzCardComponent} from 'ng-zorro-antd/card'\nimport {NzButtonComponent} from 'ng-zorro-antd/button'\nimport {MenuComponent} from \"./menu.component\";\nimport {MenuItemComponent} from \"./menu-item/menu-item.component\";\nimport {StoreModule} from \"@ngrx/store\";\nimport {menuReducer} from \"../item/store/item.reducer\";\nimport {NzIconDirective} from \"ng-zorro-antd/icon\";\n\n\n@NgModule({\n  declarations: [\n    MenuComponent,\n    MenuItemComponent\n  ],\n  exports: [\n    MenuComponent\n  ],\n  imports: [\n    CommonModule,\n    NzCardComponent,\n    NzButtonComponent,\n    StoreModule.forFeature('menu', menuReducer),\n    NzIconDirective,\n\n  ]\n})\nexport class MenuModule { }\n",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "MenuComponent"
+                        },
+                        {
+                            "name": "MenuItemComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "MenuComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        }
+    ],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "_cartReducer",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createReducer(\n    initialState,\n    on(addItem, (state, {item}) => (prepareItemToAdd(state, item))),\n    //on(addVasItem, (state, {itemId, vasItem}) => ({...state, state})),\n    on(removeItem, (state,{itemId}) => (removeItemToCart(state, itemId))),\n    //on(removeVasItem, (state) => state - 1),\n    //on(clear, (state) => 0)\n)"
+            },
+            {
+                "name": "_menuReducer",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/item/store/item.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createReducer(\n    menuId,\n    on(setMenuId, (state, { menuId }) => (menuId))\n)"
+            },
+            {
+                "name": "addItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Cart Component] Add Item', props<{item: ItemContent}>())"
+            },
+            {
+                "name": "addVasItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Cart Component] Add Vas Item', props<{itemId: number, vasItem: ItemContent}>())"
+            },
+            {
+                "name": "calculatePrice",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(cartItem: CartItem): number => {\n    let total = 0;\n\n    total += cartItem.price * cartItem.quantity;\n\n    if (Array.isArray(cartItem.vasItems)){\n\n        for (const vasItem of cartItem.vasItems) {\n            total += vasItem.price * vasItem.quantity;\n        }\n\n    }\n\n    return total;\n}"
+            },
+            {
+                "name": "cartItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/util/MockData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ItemContent[]",
+                "defaultValue": "[\n  {id: 1, menuId: 1, content: 'Ürün 1', price: 2003.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 2, menuId: 1, content: 'Ürün 2', price: 102.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 3, menuId: 1, content: 'Ürün 3', price: 1009.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 4, menuId: 1, content: 'Ürün 4', price: 920.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 5, menuId: 1, content: 'Ürün 5', price: 450.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 6, menuId: 1, content: 'Ürün 6', price: 530.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 7, menuId: 1, content: 'Ürün 7', price: 300.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 8, menuId: 1, content: 'Ürün 8', price: 5324.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 9, menuId: 1, content: 'Ürün 9', price: 5442.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 10, menuId: 1, content: 'Ürün 10', price: 23.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 11, menuId: 1, content: 'Ürün 11', price: 321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n  {id: 12, menuId: 2, content: 'Ürün 1', price: 113.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 13, menuId: 2, content: 'Ürün 2', price: 10.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 14, menuId: 2, content: 'Ürün 3', price: 923.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 15, menuId: 2, content: 'Ürün 4', price: 20.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 16, menuId: 2, content: 'Ürün 5', price: 40.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 17, menuId: 2, content: 'Ürün 6', price: 50.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 18, menuId: 2, content: 'Ürün 7', price: 31.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 19, menuId: 2, content: 'Ürün 8', price: 24.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 20, menuId: 2, content: 'Ürün 9', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 21, menuId: 2, content: 'Ürün 10', price: 1.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 22, menuId: 2, content: 'Ürün 11', price: 31.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 23, menuId: 3, content: 'Ürün 1', price: 33.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 24, menuId: 3, content: 'Ürün 2', price: 51.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 25, menuId: 3, content: 'Ürün 3', price: 359.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 26, menuId: 3, content: 'Ürün 4', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 27, menuId: 3, content: 'Ürün 5', price: 4544.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 28, menuId: 3, content: 'Ürün 6', price: 135.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 29, menuId: 3, content: 'Ürün 7', price: 530.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 30, menuId: 3, content: 'Ürün 8', price: 534.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 31, menuId: 3, content: 'Ürün 9', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 32, menuId: 3, content: 'Ürün 10', price: 12.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 33, menuId: 3, content: 'Ürün 11', price: 21.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 34, menuId: 4, content: 'Ürün 1', price: 203.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 35, menuId: 4, content: 'Ürün 2', price: 10.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 36, menuId: 4, content: 'Ürün 3', price: 5009.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 37, menuId: 4, content: 'Ürün 4', price: 920.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 38, menuId: 4, content: 'Ürün 5', price: 450.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 39, menuId: 4, content: 'Ürün 6', price: 500.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 40, menuId: 4, content: 'Ürün 7', price: 300.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 41, menuId: 4, content: 'Ürün 8', price: 5324.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 42, menuId: 4, content: 'Ürün 9', price: 5432.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 43, menuId: 4, content: 'Ürün 10', price: 123.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 44, menuId: 4, content: 'Ürün 11', price: 1321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 45, menuId: 5, content: 'Ürün 1', price: 83.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 46, menuId: 5, content: 'Ürün 2', price: 17.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 47, menuId: 5, content: 'Ürün 3', price: 609.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 48, menuId: 5, content: 'Ürün 4', price: 70.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 49, menuId: 5, content: 'Ürün 5', price: 70.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 50, menuId: 5, content: 'Ürün 6', price: 30.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 51, menuId: 5, content: 'Ürün 7', price: 350.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 52, menuId: 5, content: 'Ürün 8', price: 724.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 53, menuId: 5, content: 'Ürün 9', price: 832.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 54, menuId: 5, content: 'Ürün 10', price: 823.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 55, menuId: 5, content: 'Ürün 11', price: 321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n]"
+            },
+            {
+                "name": "cartState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.selector.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createFeatureSelector<CartState>('cart')"
+            },
+            {
+                "name": "cartTotalPrice",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(items: CartItem[]): number => {\n    let totalPrice = 0;\n\n    for (const item of items) {\n        totalPrice += calculatePrice(item);\n    }\n\n    return totalPrice;\n}"
+            },
+            {
+                "name": "clear",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Cart Component] Clear')"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.prod.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: true,\n}"
+            },
+            {
+                "name": "environment",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/environments/environment.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "object",
+                "defaultValue": "{\n  production: false,\n}"
+            },
+            {
+                "name": "getCarts",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.selector.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSelector(\n    cartState,\n    (state: CartState) => state\n)"
+            },
+            {
+                "name": "getRandomVasItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/util/MockData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(): CartItem[] => {\n\n  const randomData: CartItem[] = [];\n\n  while (randomData.length < Math.floor(Math.random() * 3) + 1) {\n    const randomIndex = Math.floor(Math.random() * vasItems.length);\n    const item: CartItem = vasItems[randomIndex] as CartItem;\n\n    if (!randomData.includes(item)) {\n      randomData.push(item);\n    }\n  }\n\n  debugger\n  return randomData;\n}"
+            },
+            {
+                "name": "ifItemHasAlreadyBeenAddedIncreaseQuantityElseAddNewItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(state: CartState, itemToBeAdded: ItemContent): CartItem[] => {\n    let cartItems: CartItem[] = [...state.items];\n    const item = cartItems.find(item => item.id === itemToBeAdded.id);\n\n    if (item) {\n        cartItems = cartItems.filter(it => it.id !== item.id)\n        cartItems.push({...item, quantity: item.quantity + 1} as CartItem);\n    } else {\n        cartItems.push(prepareItemContentForCart(itemToBeAdded));\n    }\n\n    return cartItems;\n}"
+            },
+            {
+                "name": "ifItemHasAlreadyCurrentBeenDecreaseQuantityElseRemoveItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(state: CartState, id: number): CartItem[] => {\n    let cartItems: CartItem[] = [...state.items];\n    const item = cartItems.find(item => item.id === id);\n\n    if (item && item?.quantity > 1) {\n        cartItems = cartItems.filter(it => it.id !== item.id)\n        cartItems.push({...item, quantity: item.quantity - 1} as CartItem);\n    } else {\n        cartItems = [...cartItems.filter(item => item.id !== id)];\n    }\n\n    return cartItems;\n}"
+            },
+            {
+                "name": "initialState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "CartState",
+                "defaultValue": "{\n    items: [],\n    cartTotalPrice: 0\n}"
+            },
+            {
+                "name": "menuId",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/item/store/item.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "number",
+                "defaultValue": "1"
+            },
+            {
+                "name": "menuItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/util/MockData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "MenuItem[]",
+                "defaultValue": "[\n  {id: 1, name: 'Daily' },\n  {id: 2, name: 'Ala Carte' },\n  {id: 3, name: 'Dessert' },\n  {id: 4, name: 'Lunch' },\n  {id: 5, name: 'Drink' },\n]"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/cart/cart.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<CartComponent>",
+                "defaultValue": "{\n    title: 'Example/Cart',\n    component: CartComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, CartModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/item/item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ItemComponent>",
+                "defaultValue": "{\n    title: 'Example/Item',\n    component: ItemComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, ItemModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/menu/menu.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<MenuComponent>",
+                "defaultValue": "{\n    title: 'Example/Menu',\n    component: MenuComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, MenuModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+            },
+            {
+                "name": "prepareItemContentForCart",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(item: ItemContent): CartItem => {\n    const cartItem: CartItem = new CartItem();\n    cartItem.img = item.img;\n    cartItem.price = item.price;\n    cartItem.plu = 100;\n    cartItem.vasItems = MockData.getRandomVasItem();\n    cartItem.quantity = 1;\n    cartItem.currency = item.currency;\n    cartItem.id = item.id;\n    cartItem.content = item.content;\n    cartItem.menuId = item.menuId\n\n    return cartItem;\n}"
+            },
+            {
+                "name": "prepareItemToAdd",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(state: CartState, itemToBeAdded: ItemContent): CartState => {\n    const items = ifItemHasAlreadyBeenAddedIncreaseQuantityElseAddNewItem(state, itemToBeAdded);\n\n    return {items, cartTotalPrice: cartTotalPrice(items)} as CartState\n}"
+            },
+            {
+                "name": "preview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": ".storybook/preview.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Preview",
+                "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+            },
+            {
+                "name": "removeItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Cart Component] Remove Item', props<{itemId: number}>())"
+            },
+            {
+                "name": "removeItemToCart",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "(state: CartState, id: number): CartState  => {\n    const items = ifItemHasAlreadyCurrentBeenDecreaseQuantityElseRemoveItem(state, id);\n\n    return {items, cartTotalPrice: cartTotalPrice(items)} as CartState\n}"
+            },
+            {
+                "name": "removeVasItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/cart/store/cart.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Cart Component] Remove Vas Item', props<{itemId: number, vasItemId: number}>())"
+            },
+            {
+                "name": "selectMenuId",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/item/store/item.selector.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createSelector(\n    selectMenuState,\n    (state: number) => state\n)"
+            },
+            {
+                "name": "selectMenuState",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/item/store/item.selector.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createFeatureSelector<number>('menu')"
+            },
+            {
+                "name": "setMenuId",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/modules/item/store/item.actions.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "createAction('[Menu Component] Set Menu Id', props<{ menuId: number }>())"
+            },
+            {
+                "name": "showCart",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/cart/cart.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n        cart: {\n            cartTotalPrice: 11019,\n            items: [\n                {\n                    \"id\": 4,\n                    \"menuId\": 1,\n                    \"price\": 920,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 4\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 1,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 96,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 7\",\n                            \"price\": 191,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 2\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                },\n                {\n                    \"id\": 6,\n                    \"menuId\": 1,\n                    \"price\": 530,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 6\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 1,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 99,\n                            \"menuId\": 1,\n                            \"content\": \"+ Vas 10\",\n                            \"price\": 114,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 3\n                        },\n                        // @ts-ignore\n                        {\n                            \"id\": 95,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 6\",\n                            \"price\": 164,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 1\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                },\n                {\n                    \"id\": 1,\n                    \"menuId\": 1,\n                    \"price\": 2003,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 1\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 4,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 92,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 3\",\n                            \"price\": 174,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 1\n                        },\n                        // @ts-ignore\n                        {\n                            \"id\": 90,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 1\",\n                            \"price\": 165,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 3\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                }\n            ]\n        }\n    },\n}"
+            },
+            {
+                "name": "showItem",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/item/item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n    },\n}"
+            },
+            {
+                "name": "showMenu",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/stories/menu/menu.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\n    args: {\n    },\n}"
+            },
+            {
+                "name": "vasItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/util/MockData.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "Array.from({ length: 10 }).map((_, i) => {\n  return {\n    id: 90 + i,\n    menuId: Math.floor(Math.random() * 3) + 1,\n    content: `+ Vas ${i + 1}`,\n    price: Math.floor(Math.random() * 100) + 100,\n    currency: \"$\",\n    img: \"\",\n    quantity: Math.floor(Math.random() * 3) + 1\n  };\n})"
+            }
+        ],
+        "functions": [
+            {
+                "name": "cartReducer",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": "CartState",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "action",
+                        "type": "Action",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "CartState",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "action",
+                        "type": "Action",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            {
+                "name": "menuReducer",
+                "file": "src/app/modules/item/store/item.reducer.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "state",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "action",
+                        "type": "Action",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "jsdoctags": [
+                    {
+                        "name": "state",
+                        "type": "number",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "action",
+                        "type": "Action",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
+        "typealiases": [
+            {
+                "name": "CartState",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "literal type",
+                "file": "src/app/modules/cart/store/cart.reducer.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 187
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<CartComponent>",
+                "file": "src/stories/cart/cart.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ItemComponent>",
+                "file": "src/stories/item/item.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<MenuComponent>",
+                "file": "src/stories/menu/menu.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            }
+        ],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/app/modules/cart/store/cart.reducer.ts": [
+                {
+                    "name": "_cartReducer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createReducer(\n    initialState,\n    on(addItem, (state, {item}) => (prepareItemToAdd(state, item))),\n    //on(addVasItem, (state, {itemId, vasItem}) => ({...state, state})),\n    on(removeItem, (state,{itemId}) => (removeItemToCart(state, itemId))),\n    //on(removeVasItem, (state) => state - 1),\n    //on(clear, (state) => 0)\n)"
+                },
+                {
+                    "name": "calculatePrice",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(cartItem: CartItem): number => {\n    let total = 0;\n\n    total += cartItem.price * cartItem.quantity;\n\n    if (Array.isArray(cartItem.vasItems)){\n\n        for (const vasItem of cartItem.vasItems) {\n            total += vasItem.price * vasItem.quantity;\n        }\n\n    }\n\n    return total;\n}"
+                },
+                {
+                    "name": "cartTotalPrice",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(items: CartItem[]): number => {\n    let totalPrice = 0;\n\n    for (const item of items) {\n        totalPrice += calculatePrice(item);\n    }\n\n    return totalPrice;\n}"
+                },
+                {
+                    "name": "ifItemHasAlreadyBeenAddedIncreaseQuantityElseAddNewItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(state: CartState, itemToBeAdded: ItemContent): CartItem[] => {\n    let cartItems: CartItem[] = [...state.items];\n    const item = cartItems.find(item => item.id === itemToBeAdded.id);\n\n    if (item) {\n        cartItems = cartItems.filter(it => it.id !== item.id)\n        cartItems.push({...item, quantity: item.quantity + 1} as CartItem);\n    } else {\n        cartItems.push(prepareItemContentForCart(itemToBeAdded));\n    }\n\n    return cartItems;\n}"
+                },
+                {
+                    "name": "ifItemHasAlreadyCurrentBeenDecreaseQuantityElseRemoveItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(state: CartState, id: number): CartItem[] => {\n    let cartItems: CartItem[] = [...state.items];\n    const item = cartItems.find(item => item.id === id);\n\n    if (item && item?.quantity > 1) {\n        cartItems = cartItems.filter(it => it.id !== item.id)\n        cartItems.push({...item, quantity: item.quantity - 1} as CartItem);\n    } else {\n        cartItems = [...cartItems.filter(item => item.id !== id)];\n    }\n\n    return cartItems;\n}"
+                },
+                {
+                    "name": "initialState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CartState",
+                    "defaultValue": "{\n    items: [],\n    cartTotalPrice: 0\n}"
+                },
+                {
+                    "name": "prepareItemContentForCart",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(item: ItemContent): CartItem => {\n    const cartItem: CartItem = new CartItem();\n    cartItem.img = item.img;\n    cartItem.price = item.price;\n    cartItem.plu = 100;\n    cartItem.vasItems = MockData.getRandomVasItem();\n    cartItem.quantity = 1;\n    cartItem.currency = item.currency;\n    cartItem.id = item.id;\n    cartItem.content = item.content;\n    cartItem.menuId = item.menuId\n\n    return cartItem;\n}"
+                },
+                {
+                    "name": "prepareItemToAdd",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(state: CartState, itemToBeAdded: ItemContent): CartState => {\n    const items = ifItemHasAlreadyBeenAddedIncreaseQuantityElseAddNewItem(state, itemToBeAdded);\n\n    return {items, cartTotalPrice: cartTotalPrice(items)} as CartState\n}"
+                },
+                {
+                    "name": "removeItemToCart",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(state: CartState, id: number): CartState  => {\n    const items = ifItemHasAlreadyCurrentBeenDecreaseQuantityElseRemoveItem(state, id);\n\n    return {items, cartTotalPrice: cartTotalPrice(items)} as CartState\n}"
+                }
+            ],
+            "src/app/modules/item/store/item.reducer.ts": [
+                {
+                    "name": "_menuReducer",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/item/store/item.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createReducer(\n    menuId,\n    on(setMenuId, (state, { menuId }) => (menuId))\n)"
+                },
+                {
+                    "name": "menuId",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/item/store/item.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "defaultValue": "1"
+                }
+            ],
+            "src/app/modules/cart/store/cart.actions.ts": [
+                {
+                    "name": "addItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Cart Component] Add Item', props<{item: ItemContent}>())"
+                },
+                {
+                    "name": "addVasItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Cart Component] Add Vas Item', props<{itemId: number, vasItem: ItemContent}>())"
+                },
+                {
+                    "name": "clear",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Cart Component] Clear')"
+                },
+                {
+                    "name": "removeItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Cart Component] Remove Item', props<{itemId: number}>())"
+                },
+                {
+                    "name": "removeVasItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Cart Component] Remove Vas Item', props<{itemId: number, vasItemId: number}>())"
+                }
+            ],
+            "src/util/MockData.ts": [
+                {
+                    "name": "cartItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/util/MockData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ItemContent[]",
+                    "defaultValue": "[\n  {id: 1, menuId: 1, content: 'Ürün 1', price: 2003.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 2, menuId: 1, content: 'Ürün 2', price: 102.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 3, menuId: 1, content: 'Ürün 3', price: 1009.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 4, menuId: 1, content: 'Ürün 4', price: 920.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 5, menuId: 1, content: 'Ürün 5', price: 450.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 6, menuId: 1, content: 'Ürün 6', price: 530.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 7, menuId: 1, content: 'Ürün 7', price: 300.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 8, menuId: 1, content: 'Ürün 8', price: 5324.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 9, menuId: 1, content: 'Ürün 9', price: 5442.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 10, menuId: 1, content: 'Ürün 10', price: 23.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 11, menuId: 1, content: 'Ürün 11', price: 321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n  {id: 12, menuId: 2, content: 'Ürün 1', price: 113.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 13, menuId: 2, content: 'Ürün 2', price: 10.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 14, menuId: 2, content: 'Ürün 3', price: 923.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 15, menuId: 2, content: 'Ürün 4', price: 20.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 16, menuId: 2, content: 'Ürün 5', price: 40.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 17, menuId: 2, content: 'Ürün 6', price: 50.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 18, menuId: 2, content: 'Ürün 7', price: 31.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 19, menuId: 2, content: 'Ürün 8', price: 24.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 20, menuId: 2, content: 'Ürün 9', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 21, menuId: 2, content: 'Ürün 10', price: 1.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 22, menuId: 2, content: 'Ürün 11', price: 31.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 23, menuId: 3, content: 'Ürün 1', price: 33.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 24, menuId: 3, content: 'Ürün 2', price: 51.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 25, menuId: 3, content: 'Ürün 3', price: 359.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 26, menuId: 3, content: 'Ürün 4', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 27, menuId: 3, content: 'Ürün 5', price: 4544.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 28, menuId: 3, content: 'Ürün 6', price: 135.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 29, menuId: 3, content: 'Ürün 7', price: 530.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 30, menuId: 3, content: 'Ürün 8', price: 534.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 31, menuId: 3, content: 'Ürün 9', price: 32.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 32, menuId: 3, content: 'Ürün 10', price: 12.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 33, menuId: 3, content: 'Ürün 11', price: 21.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 34, menuId: 4, content: 'Ürün 1', price: 203.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 35, menuId: 4, content: 'Ürün 2', price: 10.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 36, menuId: 4, content: 'Ürün 3', price: 5009.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 37, menuId: 4, content: 'Ürün 4', price: 920.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 38, menuId: 4, content: 'Ürün 5', price: 450.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 39, menuId: 4, content: 'Ürün 6', price: 500.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 40, menuId: 4, content: 'Ürün 7', price: 300.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 41, menuId: 4, content: 'Ürün 8', price: 5324.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 42, menuId: 4, content: 'Ürün 9', price: 5432.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 43, menuId: 4, content: 'Ürün 10', price: 123.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 44, menuId: 4, content: 'Ürün 11', price: 1321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n\n\n  {id: 45, menuId: 5, content: 'Ürün 1', price: 83.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 46, menuId: 5, content: 'Ürün 2', price: 17.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 47, menuId: 5, content: 'Ürün 3', price: 609.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 48, menuId: 5, content: 'Ürün 4', price: 70.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 49, menuId: 5, content: 'Ürün 5', price: 70.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 50, menuId: 5, content: 'Ürün 6', price: 30.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 51, menuId: 5, content: 'Ürün 7', price: 350.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 52, menuId: 5, content: 'Ürün 8', price: 724.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 53, menuId: 5, content: 'Ürün 9', price: 832.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 54, menuId: 5, content: 'Ürün 10', price: 823.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n  {id: 55, menuId: 5, content: 'Ürün 11', price: 321.0, currency: '$', img: \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\" },\n]"
+                },
+                {
+                    "name": "getRandomVasItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/util/MockData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "(): CartItem[] => {\n\n  const randomData: CartItem[] = [];\n\n  while (randomData.length < Math.floor(Math.random() * 3) + 1) {\n    const randomIndex = Math.floor(Math.random() * vasItems.length);\n    const item: CartItem = vasItems[randomIndex] as CartItem;\n\n    if (!randomData.includes(item)) {\n      randomData.push(item);\n    }\n  }\n\n  debugger\n  return randomData;\n}"
+                },
+                {
+                    "name": "menuItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/util/MockData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "MenuItem[]",
+                    "defaultValue": "[\n  {id: 1, name: 'Daily' },\n  {id: 2, name: 'Ala Carte' },\n  {id: 3, name: 'Dessert' },\n  {id: 4, name: 'Lunch' },\n  {id: 5, name: 'Drink' },\n]"
+                },
+                {
+                    "name": "vasItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/util/MockData.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "Array.from({ length: 10 }).map((_, i) => {\n  return {\n    id: 90 + i,\n    menuId: Math.floor(Math.random() * 3) + 1,\n    content: `+ Vas ${i + 1}`,\n    price: Math.floor(Math.random() * 100) + 100,\n    currency: \"$\",\n    img: \"\",\n    quantity: Math.floor(Math.random() * 3) + 1\n  };\n})"
+                }
+            ],
+            "src/app/modules/cart/store/cart.selector.ts": [
+                {
+                    "name": "cartState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.selector.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createFeatureSelector<CartState>('cart')"
+                },
+                {
+                    "name": "getCarts",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/cart/store/cart.selector.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSelector(\n    cartState,\n    (state: CartState) => state\n)"
+                }
+            ],
+            "src/environments/environment.prod.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.prod.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: true,\n}"
+                }
+            ],
+            "src/environments/environment.ts": [
+                {
+                    "name": "environment",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/environments/environment.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "object",
+                    "defaultValue": "{\n  production: false,\n}"
+                }
+            ],
+            "src/stories/cart/cart.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/cart/cart.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<CartComponent>",
+                    "defaultValue": "{\n    title: 'Example/Cart',\n    component: CartComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, CartModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+                },
+                {
+                    "name": "showCart",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/cart/cart.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n        cart: {\n            cartTotalPrice: 11019,\n            items: [\n                {\n                    \"id\": 4,\n                    \"menuId\": 1,\n                    \"price\": 920,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 4\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 1,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 96,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 7\",\n                            \"price\": 191,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 2\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                },\n                {\n                    \"id\": 6,\n                    \"menuId\": 1,\n                    \"price\": 530,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 6\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 1,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 99,\n                            \"menuId\": 1,\n                            \"content\": \"+ Vas 10\",\n                            \"price\": 114,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 3\n                        },\n                        // @ts-ignore\n                        {\n                            \"id\": 95,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 6\",\n                            \"price\": 164,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 1\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                },\n                {\n                    \"id\": 1,\n                    \"menuId\": 1,\n                    \"price\": 2003,\n                    \"currency\": \"$\",\n                    \"content\": \"Ürün 1\",\n                    \"img\": \"https://www.shutterstock.com/image-vector/simple-business-logo-vector-illustration-260nw-2224622037.jpg\",\n                    \"quantity\": 4,\n                    \"vasItems\": [\n                        // @ts-ignore\n                        {\n                            \"id\": 92,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 3\",\n                            \"price\": 174,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 1\n                        },\n                        // @ts-ignore\n                        {\n                            \"id\": 90,\n                            \"menuId\": 3,\n                            \"content\": \"+ Vas 1\",\n                            \"price\": 165,\n                            \"currency\": \"$\",\n                            \"img\": \"\",\n                            \"quantity\": 3\n                        }\n                    ],\n                    \"plu\": 100,\n                    \"totalPrice\": 0\n                }\n            ]\n        }\n    },\n}"
+                }
+            ],
+            "src/stories/item/item.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/item/item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ItemComponent>",
+                    "defaultValue": "{\n    title: 'Example/Item',\n    component: ItemComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, ItemModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+                },
+                {
+                    "name": "showItem",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/item/item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n    },\n}"
+                }
+            ],
+            "src/stories/menu/menu.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/menu/menu.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<MenuComponent>",
+                    "defaultValue": "{\n    title: 'Example/Menu',\n    component: MenuComponent,\n    tags: ['autodocs'],\n    render: (args) => ({props: args}),\n    decorators: [\n        moduleMetadata({\n            imports: [CommonModule, MenuModule, StoreModule.forRoot({}, {}),],\n        }),\n    ],\n    parameters: {\n        layout: 'fullscreen',\n    },\n}"
+                },
+                {
+                    "name": "showMenu",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/stories/menu/menu.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\n    args: {\n    },\n}"
+                }
+            ],
+            ".storybook/preview.ts": [
+                {
+                    "name": "preview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": ".storybook/preview.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Preview",
+                    "defaultValue": "{\n  parameters: {\n    actions: { argTypesRegex: \"^on[A-Z].*\" },\n    controls: {\n      matchers: {\n        color: /(background|color)$/i,\n        date: /Date$/,\n      },\n    },\n  },\n}"
+                }
+            ],
+            "src/app/modules/item/store/item.selector.ts": [
+                {
+                    "name": "selectMenuId",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/item/store/item.selector.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createSelector(\n    selectMenuState,\n    (state: number) => state\n)"
+                },
+                {
+                    "name": "selectMenuState",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/item/store/item.selector.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createFeatureSelector<number>('menu')"
+                }
+            ],
+            "src/app/modules/item/store/item.actions.ts": [
+                {
+                    "name": "setMenuId",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/modules/item/store/item.actions.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "createAction('[Menu Component] Set Menu Id', props<{ menuId: number }>())"
+                }
+            ]
+        },
+        "groupedFunctions": {
+            "src/app/modules/cart/store/cart.reducer.ts": [
+                {
+                    "name": "cartReducer",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": "CartState",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "action",
+                            "type": "Action",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "CartState",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "action",
+                            "type": "Action",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "src/app/modules/item/store/item.reducer.ts": [
+                {
+                    "name": "menuReducer",
+                    "file": "src/app/modules/item/store/item.reducer.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "state",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "action",
+                            "type": "Action",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "jsdoctags": [
+                        {
+                            "name": "state",
+                            "type": "number",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "action",
+                            "type": "Action",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {
+            "src/app/modules/cart/store/cart.reducer.ts": [
+                {
+                    "name": "CartState",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "literal type",
+                    "file": "src/app/modules/cart/store/cart.reducer.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 187
+                }
+            ],
+            "src/stories/cart/cart.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<CartComponent>",
+                    "file": "src/stories/cart/cart.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/item/item.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ItemComponent>",
+                    "file": "src/stories/item/item.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "src/stories/menu/menu.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<MenuComponent>",
+                    "file": "src/stories/menu/menu.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ]
+        }
+    },
+    "routes": [],
+    "coverage": {
+        "count": 0,
+        "status": "low",
+        "files": [
+            {
+                "filePath": ".storybook/preview.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/cart-item/cart-item-vas-item/cart-item-vas-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CartItemVasItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/cart-item/cart-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CartItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/cart.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CartComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/models/CartItem.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "CartItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "addItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "addVasItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "clear",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "removeItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "removeVasItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "cartReducer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "_cartReducer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "calculatePrice",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "cartTotalPrice",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ifItemHasAlreadyBeenAddedIncreaseQuantityElseAddNewItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ifItemHasAlreadyCurrentBeenDecreaseQuantityElseRemoveItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "initialState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "prepareItemContentForCart",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "prepareItemToAdd",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "removeItemToCart",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.selector.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "cartState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/cart/store/cart.selector.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getCarts",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/item-content/item-content.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ItemContentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/model/ItemContent.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "ItemContent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.actions.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "setMenuId",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.reducer.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "menuReducer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "_menuReducer",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.reducer.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "menuId",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.selector.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectMenuId",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/item/store/item.selector.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "selectMenuState",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/menu/menu-item/menu-item.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MenuItemComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/menu/menu.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MenuComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/modules/menu/model/MenuItem.ts",
+                "type": "class",
+                "linktype": "classe",
+                "name": "MenuItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/component/layout/content/content.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ContentComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/component/layout/footer/footer.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FooterComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/component/layout/layout.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LayoutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/component/layout/sider/sider.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SiderComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.prod.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/environments/environment.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "environment",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/cart/cart.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/cart/cart.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "showCart",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/item/item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/item/item.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "showItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/menu/menu.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/menu/menu.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "showMenu",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/util/MockData.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "cartItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/util/MockData.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "getRandomVasItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/util/MockData.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "menuItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/util/MockData.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "vasItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            }
+        ]
+    }
+}

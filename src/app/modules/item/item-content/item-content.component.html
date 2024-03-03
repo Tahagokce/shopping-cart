@@ -1,0 +1,12 @@
+<div class="card-item" nz-col [nzSpan]="8" >
+    <nz-card nzHoverable
+             class="card-content"
+             nzTitle="{{cartItem.price + ' ' + cartItem.currency}}">
+        <p>{{ cartItem?.content }}</p>
+
+        <div class="bottom-buttons">
+            <button class="minus-icon minus-color" (click)="removeItemToCart()" nz-button nzType="primary"><span nz-icon nzType="minus" nzTheme="outline"></span></button>
+            <button class="plus-icon plus-color" (click)="addItemToCart()" nz-button nzType="primary"><span nz-icon nzType="plus" nzTheme="outline"></span></button>
+        </div>
+    </nz-card>
+</div>

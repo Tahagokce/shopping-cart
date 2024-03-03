@@ -1,0 +1,27 @@
+.card {
+  margin-top: 10px;
+  max-width: 251px;
+  width: 151px;
+  max-height: 44px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(231, 236, 242, 1);
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.active-card {
+  background-color: rgba(82, 140, 224, 0.2);  /* Lighter blue with opacity */
+  border: 1px solid rgba(82, 140, 224, 1); /* Adjust opacity/color for desired emphasis */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+}
+
+.card:hover {
+  border: 1px solid rgba(33, 150, 243, 1);
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}

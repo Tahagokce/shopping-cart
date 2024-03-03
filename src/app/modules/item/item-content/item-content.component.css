@@ -1,0 +1,44 @@
+.card-item{
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-content{
+    background-color: rgba(231, 236, 242, 1);
+    width:200px;
+    .ant-card-head-title{
+        color: red !important;
+    }
+}
+
+.card-content-img{
+    background-color: rgba(231, 236, 242, 1);
+    padding: 7px;
+}
+
+.plus-icon,
+.minus-icon {
+    background-color: #fff;
+    margin-right: 10px;
+    border-radius: 4px !important;
+    border: none !important;
+    height: 40px;
+    font-size: 20px;
+    width: 60px;
+}
+
+
+.plus-icon:hover, .minus-icon:hover {
+    border: 1px solid rgba(33, 150, 243, 1);
+    background-color: rgba(33, 150, 243, 0.1);
+}
+
+.plus-color{
+    color: rgba(53, 188, 170, 1);
+
+}
+
+.minus-color{
+    color: rgba(216, 0, 39, 1);
+
+}

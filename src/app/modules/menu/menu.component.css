@@ -1,0 +1,39 @@
+.header {
+  margin-top: 10px;
+  max-width: 251px;
+  width: 151px;
+  max-height: 44px;
+  padding: 10px;
+  border-radius: 4px;
+  background-color: rgba(45, 51, 63, 1);
+  text-align: left;
+  color: #fff;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+}
+
+.bottom-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+}
+
+.home-icon,
+.menu-icon {
+  background-color: rgba(45, 51, 63, 1);
+  margin-right: 10px;
+  border-radius: 4px !important;
+  border: none !important;
+  height: 40px;
+  font-size: 20px;
+}
+
+.home-icon:hover,
+.menu-icon:hover {
+  border: 1px solid #fff;
+  background-color: rgba(60, 71, 83, 1);
+}
